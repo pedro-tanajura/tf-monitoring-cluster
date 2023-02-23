@@ -1,0 +1,11 @@
+grafana:
+    enabled: false
+
+prometheus:
+    enabled: false
+
+PodSecurityPolicy:
+    enabled: false
+    
+rbac:
+    pspEnabled: false
