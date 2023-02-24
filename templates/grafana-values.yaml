@@ -2,7 +2,7 @@ rbac:
   create: true
   ## Use an existing ClusterRole/Role (depending on rbac.namespaced false/true)
   # useExistingRole: name-of-some-(cluster)role
-  pspEnabled: false
+  pspEnabled: true
   pspUseAppArmor: true
   namespaced: false
   extraRoleRules: []
@@ -21,8 +21,8 @@ serviceAccount:
   #    eks.amazonaws.com/role-arn: arn:aws:iam::123456789000:role/iam-role-name-here
   autoMount: true
 
-podSecurityPolicy:
-  enabled: false
+#podSecurityPolicy:
+#  enabled: false
 
 replicas: ${replicas}
 

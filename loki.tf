@@ -10,9 +10,4 @@ resource "helm_release" "loki" {
   lint             = true
   wait_for_jobs    = true
   values           = [templatefile("${path.module}/templates/loki-values.yaml", {})]
-
-  set {
-    name  = "rbac.pspEnabled"
-    value = false
-  }
 }

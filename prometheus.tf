@@ -5,10 +5,10 @@ resource "helm_release" "prometheus" {
   repository = "https://prometheus-community.github.io/helm-charts"
   version    = "15.5.3"
 
-  #set {
-  #  name  = "podSecurityPolicy.enabled"
-  #  value = true
-  #}
+  set {
+    name  = "podSecurityPolicy.enabled"
+    value = true
+  }
 
   set {
     name  = "server.persistentVolume.enabled"
